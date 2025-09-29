@@ -24,6 +24,11 @@ header .container {
     margin: 0 auto;
 }
 
+header .logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
 header h1 {
     font-size: 2.5rem;
 }
@@ -64,9 +69,28 @@ section#menu {
     margin: 20px 0;
 }
 
+/* Estilo para o container do menu */
 section#menu .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adicionando colunas responsivas */
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+
+/* Estilo para os itens do menu */
+.menu-item {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar um efeito de destaque */
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: #ff6347;
+    margin-bottom: 10px;
 }
 
 section#menu h2 {
