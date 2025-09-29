@@ -69,23 +69,25 @@ section#sobre {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar um efeito de destaque */
 }
 
+/* Estilo para o container da seção 'Sobre' */
 section#sobre .container {
-    margin: 0 auto; /* Centraliza o conteúdo dentro da seção */
-    width: 100%; /* O container ocupa 100% da largura da seção */
+    margin: 0 auto;
+    width: 100%;
 }
 
+/* Estilo para o título da seção 'Sobre' */
 section#sobre h2 {
-    font-size: 2rem; /* Tamanho do título */
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
+/* Estilo para os parágrafos */
 section#sobre p {
     font-size: 1.2rem; /* Tamanho do texto */
     line-height: 1.6; /* Espaçamento entre as linhas */
-    margin: 0 auto; /* Garante que o texto fique centralizado */
+    margin: 0 auto 20px; /* Adiciona espaço abaixo de cada parágrafo */
     padding: 0 20px; /* Dá mais espaço ao redor do texto */
-    max-width: 98%; /* Limita a largura do parágrafo a 98% da largura da seção */
-    width: 100%; /* O parágrafo ocupa 100% do seu espaço disponível até o limite de 98% */
+    width: 75%; /* Define a largura dos parágrafos para 75% */
 }
 
 /* Estilo para a seção 'Menu' */
