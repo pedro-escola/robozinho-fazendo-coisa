@@ -98,15 +98,55 @@ section#menu {
 
 /* Estilo para o container do menu */
 section#menu .container {
+    display: grid; /* Usando grid para distribuir os itens em colunas */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Aumenta o tamanho mínimo das colunas para 350px */
+    gap: 30px; /* Espaçamento maior entre os itens */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 /* Estilo para os itens do menu */
 .menu-item {
-    display: flex; /* Flexbox para a imagem e texto ficarem na mesma linha */
-    align-items: center; /* Alinha a imagem e o texto verticalmente */
-    margin-bottom: 20px; /* Espaçamento entre os itens do menu */
+    display: flex; /* Flexbox para alinhar a imagem e o texto lado a lado */
+    align-items: flex-start; /* Alinha o texto ao topo da imagem */
+    padding: 15px; /* Aumenta o padding para dar mais espaço interno */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que nenhum conteúdo ultrapasse os limites do item */
+}
+
+/* Estilo para a imagem */
+.menu-item img {
+    width: 128px; /* Tamanho da imagem permanece o mesmo */
+    height: 128px; /* Tamanho da imagem permanece o mesmo */
+    object-fit: cover; /* Faz com que a imagem se ajuste dentro do tamanho */
+    margin-right: 15px; /* Aumenta o espaçamento entre a imagem e o texto */
+    border-radius: 8px; /* Adiciona bordas arredondadas à imagem */
+}
+
+/* Estilo para o texto */
+.menu-item div {
+    display: flex;
+    flex-direction: column; /* Coloca o texto (h3 e p) um abaixo do outro */
+    justify-content: flex-start; /* Alinha o texto ao topo */
+    max-width: calc(100% - 128px); /* Ajusta o texto para ocupar o espaço restante da célula */
+    word-wrap: break-word; /* Quebra palavras longas para evitar transbordamento */
+}
+
+/* Estilo para o título */
+.menu-item h3 {
+    font-size: 1.5rem; /* Tamanho do título permanece o mesmo */
+    color: #ff6347;
+    margin-bottom: 10px; /* Ajusta o espaçamento entre o título e a descrição */
+}
+
+/* Estilo para a descrição */
+.menu-item p {
+    font-size: 1.1rem; /* Tamanho da descrição permanece o mesmo */
+    line-height: 1.6;
+    margin: 0;
+    word-wrap: break-word; /* Quebra palavras longas para evitar transbordamento */
 }
 
 /* Estilo para a imagem */
@@ -122,20 +162,7 @@ section#menu .container {
 .menu-item div {
     display: flex;
     flex-direction: column; /* Coloca o texto (h3 e p) um abaixo do outro */
-}
-
-/* Estilo para o título */
-.menu-item h3 {
-    font-size: 1.5rem;
-    color: #ff6347;
-    margin-bottom: 5px; /* Ajusta o espaçamento entre o título e a descrição */
-}
-
-/* Estilo para a descrição */
-.menu-item p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 800px;
+    justify-content: flex-start; /* Alinha o texto ao topo */
 }
 
 section#menu h2 {
